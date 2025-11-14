@@ -26,12 +26,17 @@
     a:hover {
       text-decoration: underline;
     }
-    .top-left {
-      position: absolute;
-      top: 20px;
-      left: 1000px;
-      width: 80px; /* adjust size as needed */
-    }
+  .header {
+    display: flex;
+    justify-content: flex-end; /* move logo to the right */
+    margin-bottom: 20px;       /* spacing below the logo */
+  }
+  
+  .header img {
+    width: 80px;      /* adjust size */
+    max-width: 20vw;  /* scales on small screens */
+    height: auto;
+  }
   </style>
 </head>
 <body>
