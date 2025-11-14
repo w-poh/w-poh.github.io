@@ -12,36 +12,57 @@
       padding: 0 20px;
       line-height: 1.6;
     }
+
     h1 {
       color: #2c3e50;
     }
+
     address {
       font-style: normal;
       margin-top: 20px;
     }
+
     a {
       color: #0066cc;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-  .header {
-    display: flex;
-    justify-content: flex-end; /* move logo to the right */
-    margin-bottom: 16px;       /* spacing below the logo */
-    padding-right: 250px;     /* shift logo slightly inward from the container edge */
-  }
 
-  .header img {
-    width: 40px;      /* adjust size */
-    max-width: 20vw;  /* scales on small screens */
-    height: auto;
-  }
+    /* Header / logo container */
+    .header {
+      display: flex;
+      justify-content: flex-end; /* move logo to the right */
+      margin-bottom: 16px;       /* spacing below logo */
+      padding-right: 120px;      /* offset from content block */
+      width: 100%;               /* full width for responsive behavior */
+    }
+
+    .header img {
+      width: 60px;       /* adjust logo size */
+      max-width: 30vw;   /* scales on small screens */
+      height: auto;
+    }
+
+    /* Responsive: small screens */
+    @media (max-width: 500px) {
+      .header {
+        justify-content: flex-start; /* move logo above text on small screens */
+        padding-right: 0;           /* reset right padding */
+        margin-bottom: 10px;
+      }
+
+      .header img {
+        margin-left: 20px;           /* slight offset to the right */
+        margin-bottom: 10px;         /* spacing below logo */
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- SVG in the top-left corner -->
+  <!-- Logo / header -->
   <div class="header">
     <img src="mrt.svg" alt="mrt">
   </div>
@@ -53,11 +74,10 @@
     <strong>Willi Poh</strong><br>
     <strong>PhD student in Autonomous Driving</strong><br>
     Institute of Measurement and Control Systems (MRT)<br>
-    Engler‑Bunte‑Ring 21<br>
-    76131 Karlsruhe<br>
+    Engler‑Bunte‑Ring 21<br>
+    76131 Karlsruhe<br>
     <!--<a href="mailto:willi.poh@kit.edu">willi.poh@kit.edu</a><br>-->
     <a href="https://www.mrt.kit.edu/mitarbeiter_poh.php" target="_blank" rel="noopener">institute homepage</a>
   </address>
 </body>
 </html>
-
