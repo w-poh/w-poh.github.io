@@ -34,29 +34,23 @@
     /* Header / logo container */
     .header {
       display: flex;
-      justify-content: flex-end; /* move logo to the right */
+      justify-content: flex-end; /* always right-aligned */
       margin-bottom: 16px;       /* spacing below logo */
-      padding-right: 120px;      /* offset from content block */
-      width: 100%;               /* full width for responsive behavior */
+      width: 100%;               /* full width */
     }
 
     .header img {
-      width: 60px;       /* adjust logo size */
-      max-width: 30vw;   /* scales on small screens */
+      width: 60px;         /* adjust logo size */
+      max-width: 30vw;     /* scales on small screens */
       height: auto;
+      margin-right: 20px;  /* slight offset from right edge */
     }
 
-    /* Responsive: small screens */
-    @media (max-width: 500px) {
-      .header {
-        justify-content: flex-start; /* move logo above text on small screens */
-        padding-right: 0;           /* reset right padding */
-        margin-bottom: 10px;
-      }
-
+    /* Optional: small vertical spacing on very small screens */
+    @media (max-width: 400px) {
       .header img {
-        margin-left: 20px;           /* slight offset to the right */
-        margin-bottom: 10px;         /* spacing below logo */
+        margin-right: 10px; /* reduce right margin for narrow screens */
+        margin-bottom: 10px; /* spacing below logo if needed */
       }
     }
   </style>
